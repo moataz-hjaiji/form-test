@@ -1,5 +1,3 @@
-
-// type : next - prec
 const createButton= (type,content)=> {
   const button = document.createElement('button');
   button.classList.add(`${type}-button`);
@@ -7,8 +5,6 @@ const createButton= (type,content)=> {
   button.textContent = content;
   return button;
 }
-
-
 function createNextPreviousButton(){
   const questionResponseContainer = Array.from(document.querySelectorAll('.question-response'));
   questionResponseContainer.forEach((qr,index)=>{
@@ -26,7 +22,6 @@ function createNextPreviousButton(){
     }
   })
 }
-
 function nextForm(){
   const nextButtons = Array.from(document.querySelectorAll('.next-button'));
   const questionResponseConainer = Array.from(document.querySelectorAll('.question-response'))
