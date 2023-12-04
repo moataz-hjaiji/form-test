@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<form>
-    <div class="question-response" method="GET" action="#">
+<form method="POST" action="#">
+    
+    <div class="question-response" >
         <p class="question">
             Section 1 : VOTRE PROFIL ET VOTRE CONTACT
         </p>
@@ -87,7 +88,7 @@
             </table>
         </div>
     </div>
-    <div class="question-response" method="GET" action="#">
+    <div class="question-response">
         <p class="question">
         Section 2 : INFORMATIONS PERSONNELLES
         </p>
@@ -159,7 +160,7 @@
             </table>
         </div>
     </div>
-    <div class="question-response" method="GET" action="#">
+    <div class="question-response">
         <p class="question">
         Section 3 : ÉDUCATION ET EXPÉRIENCE PROFESSIONNELLE
         </p>
@@ -194,15 +195,147 @@
                             </select>
                         </td>
                     </tr>
+                    
                 </tbody>
             </table>
+            <div class="nbr-questions-diplome"></div>
         </div>
     </div>
+    <div class="question-response">
+        <p class="question">
+            Section 4: COMPÉTENCES LINGUISTIQUES EN FRANÇAIS
+        </p>
+        <div class="response">
+            <table>
+                <thead>
+                    <tr>
+                        <td>COMPÉTENCES LINGUISTIQUES EN FRANÇAIS</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="competences-linguistiques">Comment allez-vous évaluer votre niveau de français ?</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input name="competences-linguitiques-francais" type="radio" id="linguitiques-estimation">
+                                <label for="linguitiques-estimation">Estimation</label><br/>
+                                <input name="competences-linguitiques-francais" type="radio" id="utilisation-resultats">
+                                <label for="utilisation-resultats">Utilisation de résultats de tests de français</label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="show-question-section4">
+            </div>
+            <div class="show-second-question-section4">
+                <?php include('content/sectionFourQuestionTwo.php') ?>
+            </div>
+        </div>
+
+    </div>
+    <div class="question-response">
+        <p class="question">Section 5 : COMPÉTENCES LINGUISTIQUES EN ANGLAIS</p>
+        <div class="response">
+            <table>
+                <thead>
+                    <tr>
+                        <td>LANGUAGE ABILITIES - ENGLISH</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+									<th class="RegistrationFormTableTitle">
+										LANGUAGE ABILITIES - ENGLISH  	
+									</th>
+								</tr>							
+							<tr>
+								<td>
+									<strong>Comment allez-vous évaluer votre niveau en anglais?</strong><br>	
+									<input type="radio" name="HowToAssessEnglishLevel" value="Estimation" class="section5" required="" aria-required="true">
+										Estimation<br>
+									<input type="radio" name="HowToAssessEnglishLevel" value="Utiliser les résultats du test IELTS" >
+										Utiliser les résultats du test IELTS<br>												
+								</td>	
+							</tr>							
+				</tbody>
+            </table>
+            <div class="show-question-section5">
+                <div style="display:none;">
+                <?php include('content/sectionFiveChoiceOne.php') ?>
+                </div>
+                <div style="display: none;">
+                <?php include('content/sectionFiveChoiceTwo.php') ?>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+    <div class="question-response">
+    <p class="question">Section 6 : ENFANTS À CHARGE - Vous et/ou votre conjoint(e)</p>
+  <div class="response">
+      <table>
+          <thead>
+              <tr>
+                  <td>ENFANTS À CHARGE</td>
+              </tr>
+          </thead>
+          <tbody>
+            <?php include('content/sectionSix.php') ?>
+          </tbody>
+      </table>
+  </div>
+    </div>
+    <div class="question-response">
+    <p class="question">Section 7 : FAMILLE AU QUÉBEC OU AILLEURS AU CANADA - Vous et/ou votre conjoint(e)</p>
+        <div class="response">
+            <table>
+                <thead>
+                    <tr>
+                        <td>FAMILLE AU QUÉBEC OU AILLEURS AU CANADA - Vous et/ou votre conjoint(e)</td>
+                    </tr>
+                </thead>
+                <tbody>
+                        <?php include('content/sectionSeven.php') ?>
+                </tbody>
+            </table>
+            <div class="show-question-hidden-7">
+                <table style="display: none;">
+                <?php include('content/sectionQuestionChoiceTrue.php');?>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="question-response">
+    <p class="question">Section 8 : SEJOURS ET VISITES AU QUÉBEC OU AILLEURS AU CANADA - Vous et/ou votre conjoint(e)</p>
+        <div class="response">
+            <table>
+                <tbody>
+                        <?php include('content/sectionSeven.php') ?>
+                </tbody>
+            </table>
+            <div class="show-question-hidden-7">
+                <table style="display: none;">
+                <?php include('content/sectionQuestionChoiceTrue.php');?>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
     <button type="button" onclick="validation()">Soumettre</button>
 </form>
 <script src="index.js"></script>
-<script src="displayQuestion.js"></script>
-<script src="nextPrecPage.js"></script>
+<script src="js/displayQuestion.js"></script>
+<script src="js/nextPrecPage.js"></script>
+<script src="js/sectionThree.js"></script>
+<script src="js/sectionFour.js" ></script>
+<script src="js/sectionFive.js" ></script>
+<script src="js/sectionSeven.js"></script>
 </body>
 </html>
 

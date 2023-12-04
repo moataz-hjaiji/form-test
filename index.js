@@ -51,7 +51,6 @@ const deleteAllMessageError = () =>{
     })
   }
   if(questions){
-    console.log(questions);
     questions.forEach(q=>q.style.background="white");
   }
 }

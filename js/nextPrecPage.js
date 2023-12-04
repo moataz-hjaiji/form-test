@@ -36,7 +36,6 @@ function precForm(){
   const precButtons = Array.from(document.querySelectorAll('.prec-button'));
   const questionResponseConainer = Array.from(document.querySelectorAll('.question-response'))
   for(let i =precButtons.length-1;i>=0; i--){
-    console.log(i)
     precButtons[i].addEventListener('click',()=>{
       questionResponseConainer[i+1].classList.remove('show-question-form');
       questionResponseConainer[i].classList.add('show-question-form');
