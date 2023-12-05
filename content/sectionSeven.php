@@ -10,7 +10,7 @@
 </tr>
 <tr>
     <td>
-        <input type="radio" name="HaveFamilyInCanada" id="HaveFamilyInCanada_no" value="Non">
+        <input type="radio" name="HaveFamilyInCanada" id="HaveFamilyInCanada_no" value="Non" checked>
         <label for="HaveFamilyInCanada_no" >Non</label>
     </td>
 </tr>

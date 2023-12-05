@@ -316,15 +316,79 @@
         <div class="response">
             <table>
                 <tbody>
-                        <?php include('content/sectionSeven.php') ?>
+                        <?php include('content/sectionEight.php') ?>
                 </tbody>
             </table>
-            <div class="show-question-hidden-7">
-                <table style="display: none;">
-                <?php include('content/sectionQuestionChoiceTrue.php');?>
-                </table>
+            <div class="show-question-hidden-8" style="display: none;">
+                <?php include('content/sectionEightQuestion2.php');?>
+
             </div>
         </div>
+    </div>
+    <div class="question-response">
+        <p class="question">Section 9 : OFFRE D'EMPLOI FAITE PAR UN EMPLOYEUR AU QUEBEC OU AILLEURS AU CANADA
+    Vous et/ou votre conjoint(e)</p>
+<div class="response">
+    <table>
+        <thead>
+            <tr>
+                <td>Offre d'emploi à vous uniquement.</td>
+            </tr>
+        </thead>
+        <tbody>
+            <?php include('content/section9/mainQuestion.php') ?>
+        </tbody>
+       
+    </table>
+    <div class="show-question-hidden-9" style="display: none;">
+            <?php include('content/section9/subQuestion.php') ?>
+        </div>
+</div>
+    </div>
+    <div class="question-response">
+        <p class="question">Section 10 : JOINDRE VOTRE CURRICULUM VITAE</p>
+        <div class="response">
+            <table>
+                <thead>
+                    <tr>
+                        <td>
+                        JOINDRE VOTRE CURRICULUM VITAE (CV).
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php include("content/section10/mainQuestion.php") ?>
+                    <?php include('content/section10/secondQuestion.php') ?>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <div class="question-response">
+        <p class="question">Section 11 : COMMENTAIRES / NOTES ADDITIONNELLES (optionelle)</p>
+        <div class="response">
+          <table>
+            <thead>
+                <tr>
+                    <td>COMMENTAIRES / NOTES ADDITIONNELLES (optionelle)</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="commentaires">
+                    Avez-vous des commentaires, des informations supplémentaires ou des questions pertinentes?
+                Veuillez les entrer dans la zone ci-dessous :
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><textarea name="commentaires" id="commentaires" cols="30" rows="10"></textarea></td>
+                </tr>
+            </tbody>
+        </table>   
+        </div>
+       
     </div>
 </div>
     <button type="button" onclick="validation()">Soumettre</button>
@@ -336,6 +400,10 @@
 <script src="js/sectionFour.js" ></script>
 <script src="js/sectionFive.js" ></script>
 <script src="js/sectionSeven.js"></script>
+<script src="js/Q8/sectionEight.js"></script>
+<script src="js/Q8/sectionEightSejour.js"></script>
+<script src="js/Q9/index.js"></script>
+<script src="js/Q10/index.js"></script>
 </body>
 </html>
 

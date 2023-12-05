@@ -2,10 +2,17 @@
   margin:0;
   padding:0;
   box-sizing: border-box;
+
 }
-.response{
-  display: none;
-}
-.question-response.show-question-form .response{
-  display: block;
-}
+.response {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 1s ease-out, max-height 1s ease-out;
+ }
+ 
+ .question-response.show-question-form .response {
+  opacity: 1;
+  max-height: 1000px; /* Adjust this value as needed */
+ }
+ 
