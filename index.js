@@ -1,17 +1,18 @@
 
-import {validQ1, validQ2, validQ3, validQ4, validQ5, validQ6} from "./validation/index.js";
+import * as valid from "./validation/index.js";
 
 const q1 = document.querySelector('.question');
 export function validation(){
   deleteAllMessageError();
-  if(!validQ1()){
+  if(!valid.validQ1()){
     q1.style.background = 'red';
   }
-  validQ2();
-  validQ3();
-  validQ4();
-  validQ5();
-  validQ6();
+  valid.validQ2();
+  valid.validQ3();
+  valid.validQ4();
+  valid.validQ5();
+  valid.validQ6();
+  valid.validQ7();
 }
 
 

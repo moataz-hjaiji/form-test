@@ -2,7 +2,7 @@ const choiceSectionSeven = Array.from(document.querySelectorAll('[name="HaveFami
 
 choiceSectionSeven.forEach((choice)=>{
   choice.addEventListener('change',()=>{
-   choice.value.toLowerCase() === "oui"?showSubQuestion():hiddenSubQuestion();
+   choice.value.toLowerCase() === "yes"?showSubQuestion():hiddenSubQuestion();
   })
 })
 

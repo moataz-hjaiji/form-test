@@ -4,13 +4,13 @@
 </tr>
 <tr>
     <td>
-        <input type="radio" name="HaveFamilyInCanada" id="HaveFamilyInCanada_yes" value="Oui" class="section7" required="" aria-required="true">
+        <input type="radio" name="HaveFamilyInCanada" id="HaveFamilyInCanada_yes" value="Yes" class="section7" >
         <label for='HaveFamilyInCanada_yes'>Oui</label>
     </td>
 </tr>
 <tr>
     <td>
-        <input type="radio" name="HaveFamilyInCanada" id="HaveFamilyInCanada_no" value="Non" >
+        <input type="radio" name="HaveFamilyInCanada" id="HaveFamilyInCanada_no" value="No" >
         <label for="HaveFamilyInCanada_no" >Non</label>
     </td>
 </tr>
