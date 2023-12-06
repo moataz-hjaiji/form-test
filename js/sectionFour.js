@@ -14,7 +14,6 @@ function responsiveQuestion(){
   })
 }
 function showSecondQuestion(){
-  console.log('it works!')
   const choicesInput= Array.from(document.querySelectorAll('input[name="FrenchTestLanguage"]'));
   let selectedLanguage = '';
   choicesInput.forEach((i)=>{
@@ -25,18 +24,16 @@ function showSecondQuestion(){
               selectedLanguage = input.value;
           }
       });
-      if(selectedLanguage != ''){
+      if(selectedLanguage !== ''){
         makeSecondChoiceDisplayNone();
         showSecondQuestionSelected(selectedLanguage)
       }
-      
+
     })
 
-    
+
   })
-  // choicesInput.forEach((checkboxInput,index)=>{
-  //   console.log(index);
-  // })
+
 }
 responsiveQuestion()
 function makeSecondChoiceDisplayNone(){
@@ -135,11 +132,11 @@ const questionResultsTests = `<table class="RegistrationFormTable">
 <tr>				
   <td>
     <!--<strong>Please choose a test: </strong><br>-->
-    <input type="radio" name="FrenchTestLanguage" value="TEFaQ" >
+    <input type="radio" name="FrenchTestLanguage" value="tefaq" >
       <strong>TEFaQ:</strong> Test d’évaluation du français adapté pour le Québec de la Chambre 
       de commerce et d’industrie de Paris-Île de France (CCIP-IDF)<br>
       
-    <input type="radio" name="FrenchTestLanguage" value="TCFQ">
+    <input type="radio" name="FrenchTestLanguage" value="tcfq">
       <strong>TCFQ:</strong> Test de connaissance du français pour le Québec du Centre 
       international d’études pédagogiques (CIEP)<br>
   </td>

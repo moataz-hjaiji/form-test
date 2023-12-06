@@ -9,7 +9,7 @@
 </head>
 <body>
 <form method="POST" action="#">
-    
+
     <div class="question-response" >
         <p class="question">
             Section 1 : VOTRE PROFIL ET VOTRE CONTACT
@@ -34,21 +34,13 @@
                     <tr>
                     <td>Quelle est votre destination préférée au Canada?</td>
                         <td>
-                            <select name="favorite-destination" id="favorite-destination">
-                                <option value="">Sélectionnez une destination</option>
-                                <option value="Colombie-Britannique" selected>Colombie-Britannique</option>
-                                <!-- Add otder options as needed -->
-                            </select>
+                           <?php include('select/destinationPreferedInCanada.php') ?>
                         </td>
                     </tr>
                     <tr>
                     <td>Votre avoir net (question facultative)</td>
                     <td>
-                        <select name="net-wortd" id="net-wortd">
-                            <option value="">Sélectionnez votre avoir net</option>
-                            <option value="25,010$ - 100,000$" selected>25,010$ - 100,000$</option>
-                            <!-- Add otder options as needed -->
-                        </select>
+                        <?php include('select/netSelect.php') ?>
                     </td>
 
                     </tr>
@@ -106,6 +98,7 @@
                     </td>
                     <td>
                         <select  id='salution' name='salution'>
+                            <option value="description">Select salution</option>
                             <option value="mr">Mr</option>
                             <option value="mme">Mme</option>
                             <option value="mlle">Mlle</option>
@@ -115,6 +108,7 @@
                     <td><label for="sexe"> Sexe :</label></td>
                     <td>
                         <select name="sexe" id="sexe">
+                            <option value="description">Select sexe</option>
                             <option value="homme">homme</option>
                             <option value="femme">Femme</option>
                         </select>
@@ -126,9 +120,17 @@
                   </tr>
                   <tr>
                     <td><label for="CountryBirth"> Pays de naissance:</label></td>
-                    <td><?php include('select/selectNation.php') ?></td>
-                    <td><label for="CitizenShip">Nationalité :</label> </td>
-                    <td><?php include('select/selectNation.php') ?></td>
+                    <td>
+                    <select id="CountryBirth" name="CountryBirth" >
+                        <?php include('select/selectNation.php') ?>
+                        </select>
+                    </td>
+                    <td><label for="Nationality">Nationalité :</label> </td>
+                    <td>
+                    <select name="Nationality" id="Nationality">
+                    <?php include('select/selectNation.php') ?>
+                    </select>
+                </td>
                   </tr>
                   <tr>
                     <td>Province/Etat :</td>
@@ -195,7 +197,7 @@
                             </select>
                         </td>
                     </tr>
-                    
+
                 </tbody>
             </table>
             <div class="nbr-questions-diplome"></div>
@@ -213,21 +215,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            <label for="competences-linguistiques">Comment allez-vous évaluer votre niveau de français ?</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <input name="competences-linguitiques-francais" type="radio" id="linguitiques-estimation">
-                                <label for="linguitiques-estimation">Estimation</label><br/>
-                                <input name="competences-linguitiques-francais" type="radio" id="utilisation-resultats">
-                                <label for="utilisation-resultats">Utilisation de résultats de tests de français</label>
-                            </div>
-                        </td>
-                    </tr>
+                    <?php include('./content/section4/section4ChoiceQuestion.php') ?>
                 </tbody>
             </table>
             <div class="show-question-section4">
@@ -250,28 +238,28 @@
                 <tbody>
                     <tr>
 									<th class="RegistrationFormTableTitle">
-										LANGUAGE ABILITIES - ENGLISH  	
+										LANGUAGE ABILITIES - ENGLISH
 									</th>
-								</tr>							
+								</tr>
 							<tr>
 								<td>
-									<strong>Comment allez-vous évaluer votre niveau en anglais?</strong><br>	
+									<strong>Comment allez-vous évaluer votre niveau en anglais?</strong><br>
 									<input type="radio" name="HowToAssessEnglishLevel" value="Estimation" class="section5" required="" aria-required="true">
 										Estimation<br>
 									<input type="radio" name="HowToAssessEnglishLevel" value="Utiliser les résultats du test IELTS" >
-										Utiliser les résultats du test IELTS<br>												
-								</td>	
-							</tr>							
+										Utiliser les résultats du test IELTS<br>
+								</td>
+							</tr>
 				</tbody>
             </table>
             <div class="show-question-section5">
                 <div style="display:none;">
-                <?php include('content/sectionFiveChoiceOne.php') ?>
+                <?php include('content/section5/sectionFiveChoiceOne.php') ?>
                 </div>
                 <div style="display: none;">
-                <?php include('content/sectionFiveChoiceTwo.php') ?>
+                <?php include('content/section5/sectionFiveChoiceTwo.php') ?>
                 </div>
-                
+
 
             </div>
         </div>
@@ -338,7 +326,7 @@
         <tbody>
             <?php include('content/section9/mainQuestion.php') ?>
         </tbody>
-       
+
     </table>
     <div class="show-question-hidden-9" style="display: none;">
             <?php include('content/section9/subQuestion.php') ?>
@@ -386,24 +374,30 @@
                     <td><textarea name="commentaires" id="commentaires" cols="30" rows="10"></textarea></td>
                 </tr>
             </tbody>
-        </table>   
+        </table>
         </div>
-       
+
     </div>
 </div>
     <button type="button" onclick="validation()">Soumettre</button>
 </form>
-<script src="index.js"></script>
-<script src="js/displayQuestion.js"></script>
-<script src="js/nextPrecPage.js"></script>
-<script src="js/sectionThree.js"></script>
-<script src="js/sectionFour.js" ></script>
-<script src="js/sectionFive.js" ></script>
-<script src="js/sectionSeven.js"></script>
-<script src="js/Q8/sectionEight.js"></script>
-<script src="js/Q8/sectionEightSejour.js"></script>
-<script src="js/Q9/index.js"></script>
-<script src="js/Q10/index.js"></script>
+<script type="module">
+    import { validation } from './index.js';
+    window.validation = validation;
+</script>
+<script type="module" src="index.js"></script>
+<script type="module"  src="js/displayQuestion.js"></script>
+<script type="module"  src="js/nextPrecPage.js"></script>
+<script type="module"  src="js/Q3/sectionThree.js"></script>
+<script type="module"  src="js/sectionFour.js" ></script>
+<script type="module"  src="js/sectionFive.js" ></script>
+<script type="module"  src="js/sectionSeven.js"></script>
+<script type="module"  src="js/Q8/sectionEight.js"></script>
+<script type="module"  src="js/Q8/sectionEightSejour.js"></script>
+<script type="module"  src="js/Q9/index.js"></script>
+<script type="module"  src="js/Q10/index.js"></script>
+<script type="module" src="validation/index.js" ></script>
+
 </body>
 </html>
 
