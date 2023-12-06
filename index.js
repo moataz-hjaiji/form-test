@@ -1,5 +1,5 @@
 
-import * as valid from "./validation/index.js";
+import * as valid from "./js/validation/index.js";
 
 const q1 = document.querySelector('.question');
 export function validation(){
@@ -13,6 +13,9 @@ export function validation(){
   valid.validQ5();
   valid.validQ6();
   valid.validQ7();
+  valid.validQ8();
+  valid.validQ9();
+  valid.validQ10();
 }
 
 

@@ -1,6 +1,6 @@
-import {isCheckBoxChecked, isEmpty, isNotFirstOptionInMultipleSeletors} from "../js/helper/index.js";
-import {showErrorMessage} from "../js/Error/showError.js";
-import {isOneBoxChecked} from "../js/helper/isOneBoxChecked.js";
+import {isCheckBoxChecked, isEmpty, isNotFirstOptionInMultipleSeletors} from "../helper/index.js";
+import {showErrorMessage} from "../Error/showError.js";
+import {isOneBoxChecked} from "../helper/isOneBoxChecked.js";
 
 export function validQ4(){
     const choiceOne = document.querySelector("#linguitiques-estimation");

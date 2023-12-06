@@ -1,5 +1,5 @@
-import { showErrorMessage } from "../js/Error/showError.js";
-import { isNum, notSelectFiledOneInSelect } from "../js/helper/index.js";
+import { showErrorMessage } from "../Error/showError.js";
+import { isNum, notSelectFiledOneInSelect } from "../helper/index.js";
 export function validQ1(){
   const firstEmailField = document.querySelector("#email");
   const secondEmailField = document.querySelector("#confirm-email");
@@ -18,7 +18,7 @@ export function validQ1(){
   }
   if(!notSelectFiledOneInSelect('#ProvinceOfDestination')){
     showErrorMessage(selectDestinationPreferred)
-    
+
   }
   if(paysResidance.value===""){
     showErrorMessage(paysResidance);

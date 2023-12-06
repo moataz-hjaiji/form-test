@@ -1,4 +1,4 @@
-import {isNotFirstOptionInMultipleSeletors} from "../js/helper/index.js";
+import {isNotFirstOptionInMultipleSeletors} from "../helper/index.js";
 
 export function validQ6(){
     const classSelector = ['Dependents12YearsOrUnder','Dependents13To18Years','Dependents19YearsAndOlder'];

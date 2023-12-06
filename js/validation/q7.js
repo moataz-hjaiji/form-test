@@ -1,5 +1,5 @@
-import {isOneBoxChecked} from "../js/helper/isOneBoxChecked.js";
-import {isNotFirstOptionInMultipleSeletors} from "../js/helper/index.js";
+import {isOneBoxChecked} from "../helper/isOneBoxChecked.js";
+import {isNotFirstOptionInMultipleSeletors} from "../helper/index.js";
 
 export function validQ7(){
     const tagNameCheckBox = "HaveFamilyInCanada";

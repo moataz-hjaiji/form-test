@@ -34,13 +34,13 @@
                     <tr>
                     <td>Quelle est votre destination préférée au Canada?</td>
                         <td>
-                           <?php include('select/destinationPreferedInCanada.php') ?>
+                           <?php include('content/select/destinationPreferedInCanada.php') ?>
                         </td>
                     </tr>
                     <tr>
                     <td>Votre avoir net (question facultative)</td>
                     <td>
-                        <?php include('select/netSelect.php') ?>
+                        <?php include('content/select/netSelect.php') ?>
                     </td>
 
                     </tr>
@@ -122,13 +122,13 @@
                     <td><label for="CountryBirth"> Pays de naissance:</label></td>
                     <td>
                     <select id="CountryBirth" name="CountryBirth" >
-                        <?php include('select/selectNation.php') ?>
+                        <?php include('content/select/selectNation.php') ?>
                         </select>
                     </td>
                     <td><label for="Nationality">Nationalité :</label> </td>
                     <td>
                     <select name="Nationality" id="Nationality">
-                    <?php include('select/selectNation.php') ?>
+                    <?php include('content/select/selectNation.php') ?>
                     </select>
                 </td>
                   </tr>
@@ -153,7 +153,7 @@
                         <input type="date" name="date-de-naissance" id="date-de-naissance">
                     </td>
                     <td><label for="MaritalStatus">Status Matrimonial :</label></td>
-                    <td><?php include('select/statusMatrimonial.php') ?></td>
+                    <td><?php include('content/select/statusMatrimonial.php') ?></td>
                   </tr>
                   <tr>
 
@@ -396,7 +396,7 @@
 <script type="module"  src="js/Q8/sectionEightSejour.js"></script>
 <script type="module"  src="js/Q9/index.js"></script>
 <script type="module"  src="js/Q10/index.js"></script>
-<script type="module" src="validation/index.js" ></script>
+<script type="module" src="js/validation/index.js" ></script>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
-import { showErrorMessage } from "../js/Error/showError.js";
-import { isEmpty, notSelectFiledOneInSelect } from "./../js/helper/index.js";
+import { showErrorMessage } from "../Error/showError.js";
+import { isEmpty, notSelectFiledOneInSelect } from "../helper/index.js";
 
 export function validQ2(){
   const selectSalution = document.querySelector("#salution");
