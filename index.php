@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<form method="POST" action="#">
+<form method="POST" action="php/validation.php" >
 
     <div class="question-response" >
         <p class="question">
@@ -379,7 +379,7 @@
 
     </div>
 </div>
-    <button type="button" onclick="validation()">Soumettre</button>
+    <button type="button" onclick="return validation()">Soumettre</button>
 </form>
 <script type="module">
     import { validation } from './index.js';

@@ -1,26 +1,32 @@
 
 import * as valid from "./js/validation/index.js";
+import {Section} from "./js/class/section.js";
 
-const q1 = document.querySelector('.question');
+
 export function validation(){
+  const questions = Array.from(document.querySelectorAll('.question'));
+  const validationArray = initialValidationArray(questions);
   deleteAllMessageError();
-  if(!valid.validQ1()){
-    q1.style.background = 'red';
+  deleteClassErrorSection(questions);
+  if(allSectionValid(validationArray)){
+    // Submit
+    console.log("submitted");
+    document.querySelector("body > form").submit();
   }
-  valid.validQ2();
-  valid.validQ3();
-  valid.validQ4();
-  valid.validQ5();
-  valid.validQ6();
-  valid.validQ7();
-  valid.validQ8();
-  valid.validQ9();
-  valid.validQ10();
+
 }
 
-
-
-
+const allSectionValid = (validationArray) =>{
+  const testValidationSection = validationArray.map((validation)=>{
+    if(!validation.valid()){
+      validation.className.parentNode.classList.add('error-mode')
+      return false;
+    }
+    return true;
+  })
+  console.log(testValidationSection);
+  return !testValidationSection.includes(false);
+}
 const deleteAllMessageError = () =>{
   const messageError = document.querySelectorAll('.error-message');
   const questions = Array.from(document.querySelectorAll('.question'));
@@ -32,4 +38,17 @@ const deleteAllMessageError = () =>{
   if(questions){
     questions.forEach(q=>q.style.background="white");
   }
+}
+const deleteClassErrorSection = (questions) =>{
+  questions.forEach(q=>q.parentNode.classList.remove('error-mode'));
+}
+const initialValidationArray = (questions) =>{
+  const validationArray = [];
+  let i = 0;
+  for(let v in valid){
+    const section = new Section(questions[i],valid[`validQ${i+1}`]);
+    i++;
+    validationArray.push(section);
+  }
+  return validationArray;
 }
